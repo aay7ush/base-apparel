@@ -13,7 +13,7 @@ Building realistic projects to improve my front-end skills.
 
 ### Links
 
-- Live Site URL: [Base Apparel coming soon page](https://intro-with-s1gn-up-form.netlify.app/)
+- Live Site URL: [Base Apparel coming soon page](https://base-apparel-p4ge.netlify.app/)
 
 ## Built with
 
