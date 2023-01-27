@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+/* Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+/* Variables */
+
+:root {
+  --clr-desaturated-red: hsl(0, 36%, 70%);
+  --clr-soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--clr-desaturated-red);
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  min-height: 100vh;
+  margin-block: 6rem;
+}
+
+/* Base Apparel */
+
+.apparel {
+  display: grid;
+  gap: 3rem;
+}
+
+.apparel__img img {
+  display: block;
+  min-width: 100%;
+}
+
+.apparel__content {
+  max-width: min(75vw, 550px);
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.apparel__logo {
+  max-width: 120px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.apparel__logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.apparel__heading {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.apparel__heading span {
+  color: var(--dark-grayish-red);
+  font-weight: 600;
+}
+
+.apparel__body {
+  line-height: 1.7rem;
+}
+
+form {
+  position: relative;
+}
+
+form input {
+  min-width: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 1px solid var(--clr-desaturated-red);
+  background: transparent;
+}
+
+form div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+form input::placeholder {
+  color: var(--clr-desaturated-red);
+  font-weight: 400;
+}
+
+form .error img {
+  display: none;
+  position: absolute;
+  right: 85px;
+  top: 12px;
+}
+
+form .error p {
+  display: none;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--clr-soft-red);
+  text-align: start;
+  padding-left: 1rem;
+}
+
+form button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 0 7px 10px hsl(0, 36%, 70%);
+}
+
+form button:hover {
+  background: linear-gradient(135deg, hsl(359, 79%, 89%), hsl(0, 80%, 86%));
+  transition: 0.3s ease;
+  transform: scale(1.125, 1.1);
+}
+
+/* Media Queries (MEDIUM SCREENS) */
+
+@media (min-width: 768px) {
+  body {
+    margin-block: 0;
+    margin-left: 5rem;
+  }
+
+  .apparel {
+    grid-auto-flow: column;
+    gap: 3rem;
+    position: relative;
+  }
+
+  .apparel__img {
+    order: 1;
+  }
+
+  .apparel__img img {
+    content: url(images/hero-desktop.jpg);
+    max-height: 100vh;
+  }
+
+  .apparel__content {
+    text-align: start;
+    margin: auto 0;
+  }
+
+  .apparel__logo {
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media (min-width: 1124px) {
+  body {
+    margin-left: 8rem;
+  }
+
+  .apparel__img img {
+    min-width: 600px;
+    margin-left: auto;
+  }
+
+  .apparel__heading {
+    font-size: 3.5rem;
+    padding-right: 1.4rem;
+  }
+
+  .apparel__body {
+    font-size: 1.2rem;
+  }
+}
